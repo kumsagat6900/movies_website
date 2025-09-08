@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyMovieBase</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="logo">🎬 MyMovieBase</h1>
+      <nav class="nav-bar">
+        <a href="#popular">Популярные</a>
+        <a href="#new">Новые</a>
+        <a href="#genres">По жанрам</a>
+        <input
+          type="text"
+          placeholder="Поиск фильмов..."
+          class="search-input"
+        />
+        <button class="btn-favorites">⭐ Избранное</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="popular" class="popular section">
+        <h2>Популярные фильмы</h2>
+        <div class="cards">
+          <!-- Карточка -->
+          <article class="card">
+            <img src="images/1+1.webp" alt="Фильм 1+1" class="card-img" />
+            <h3>1+1</h3>
+            <p class="card-desc">
+              История дружбы миллионера и его сиделки. Год: 2011
+            </p>
+          </article>
+          <article class="card">
+            <img src="images/matrix.jpg" alt="Матрица" class="card-img" />
+            <h3>Матрица</h3>
+            <p class="card-desc">Год: 1999</p>
+          </article>
+          <article class="card">
+            <img src="images/fightclub.jpg" alt="Бойцовский клуб" class="card-img" />
+            <h3>Бойцовский клуб</h3>
+            <p class="card-desc">Год: 1999</p>
+          </article>
+          <article class="card">
+            <img src="images/godfather.webp" alt="Крёстный отец" class="card-img" />
+            <h3>Крёстный отец</h3>
+            <p class="card-desc">Год: 1972</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="new" class="new section">
+        <h2>Новые фильмы</h2>
+        <div class="cards">
+          <article class="card">
+            <img src="images/dune.webp" alt="Дюна" class="card-img" />
+            <h3>Дюна</h3>
+            <p class="card-desc">
+              Эпическая история Атрейдесов на планете Арракис. Год: 2021
+            </p>
+          </article>
+          <article class="card">
+            <img
+              src="images/oppenheimer.jpg"
+              alt="Оппенгеймер"
+              class="card-img"
+            />
+            <h3>Оппенгеймер</h3>
+            <p class="card-desc">
+              Создание атомной бомбы глазами Кристофера Нолана. Год: 2023
+            </p>
+          </article>
+          <article class="card">
+            <img src="images/spiderman.webp" alt="Человек-паук: Нет пути домой" class="card-img" />
+            <h3>Человек-паук: Нет пути домой</h3>
+            <p class="card-desc">Год: 2021</p>
+          </article>
+
+          <article class="card">
+            <img src="images/batman.jpg" alt="Бэтмен" class="card-img" />
+            <h3>Бэтмен</h3>
+            <p class="card-desc">Год: 2022</p>
+          </article>
+          <article class="card">
+            <img src="images/mission8.jpg" alt="Mission: Impossible 8" class="card-img" />
+            <h3>Mission: Impossible – The Final Reckoning</h3>
+            <p class="card-desc">Год: 2025</p>
+          </article>
+      
+          <article class="card">
+            <img src="images/jurassic_rebirth.jpg" alt="Jurassic World: Rebirth" class="card-img" />
+            <h3>Jurassic World: Rebirth</h3>
+            <p class="card-desc">Год: 2025</p>
+          </article>
+      
+          <article class="card">
+            <img src="images/superman2025.jpg" alt="Superman" class="card-img" />
+            <h3>Superman</h3>
+            <p class="card-desc">Год: 2025</p>
+          </article>
+
+      
+        </div>
+      </section>
+
+      <section id="genres" class="genres section">
+        <h2>По жанрам</h2>
+        <div class="cards">
+          <article class="card">
+            <img src="images/inception.jpg" alt="Начало" class="card-img" />
+            <h3>Начало</h3>
+            <p class="card-desc">Фантастика, триллер, драма. Год: 2010</p>
+          </article>
+          <article class="card">
+            <img src="images/joker.jpeg" alt="Джокер" class="card-img" />
+            <h3>Джокер</h3>
+            <p class="card-desc">Драма, криминал, психология. Год: 2019</p>
+          </article>
+          <article class="card">
+            <img src="images/inception.jpg" alt="Начало" class="card-img" />
+            <h3>Начало</h3>
+            <p class="card-desc">Фантастика, триллер, драма. Год: 2010</p>
+          </article>
+          <article class="card">
+            <img src="images/joker.jpeg" alt="Джокер" class="card-img" />
+            <h3>Джокер</h3>
+            <p class="card-desc">Драма, криминал, психология. Год: 2019</p>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Модальное окно -->
+    <div class="modal hidden">
+      <div class="modal-content">
+        <button class="close-btn">✖</button>
+        <img class="modal-img" src="" alt="Постер" />
+        <div class="modal-text"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p>© 2025 Талгат | MyMovieBase</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>
