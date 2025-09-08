@@ -45,9 +45,9 @@ window.addEventListener("scroll", () => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
-    if (pageYOffset >= sectionTop - sectionHeight / 3) {
-      current = section.getAttribute("id");
-    }
+    if (pageYOffset >= sectionTop - 80) { // 80 — высота шапки
+        current = section.getAttribute("id");
+      }
   });
 
   navLinks.forEach((link) => {
