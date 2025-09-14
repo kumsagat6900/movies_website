@@ -24,24 +24,24 @@ body {
 
 /* header */
 .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 40px;
-  
-    background: rgba(22, 27, 41, 0.7); /* полупрозрачный фон */
-    backdrop-filter: blur(10px); /* размытость */
-    -webkit-backdrop-filter: blur(10px); /* для Safari */
-  
-    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-    transition: background 0.3s ease;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+
+  background: rgba(22, 27, 41, 0.7); /* полупрозрачный фон */
+  backdrop-filter: blur(10px); /* размытость */
+  -webkit-backdrop-filter: blur(10px); /* для Safari */
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
+}
 .logo {
   font-size: 1.5rem;
   font-weight: 800;
@@ -103,8 +103,9 @@ body {
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto)); /* не растягиваем */
   gap: 20px;
+  justify-content: center; /* чтобы карточки были по центру */
 }
 .card {
   background: var(--card);
@@ -113,6 +114,8 @@ body {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
+  max-width: 220px; /* ограничение */
+  width: 100%;
 }
 .card:hover {
   transform: translateY(-6px);
@@ -182,16 +185,73 @@ body {
   margin-top: 40px;
 }
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  .search-results .card {
-    animation: fadeIn 0.3s ease forwards;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+.search-results {
+  padding: 40px 20px;
+  min-height: auto; /* секция не будет гигантской пустой */
+}
+
+.search-results .cards {
+  justify-content: center; /* центрируем */
+}
+
+.search-results .card {
+  animation: fadeIn 0.3s ease forwards;
+  border: 2px solid var(--accent);
+  background-color: rgba(79, 172, 254, 0.1);
+}
+.search-results.section {
+
+  min-height: auto;
+  padding: 40px 20px;
+}
+.suggestions {
+  position: absolute;
+  top: 60px; /* ниже инпута */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  background: var(--card);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  z-index: 1001;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none; /* скрыта по умолчанию */
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.suggestions li:hover {
+  background: rgba(79, 172, 254, 0.2);
+  color: var(--accent);
+}
+
+.fav-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.fav-btn:hover {
+  transform: scale(1.2);
+}

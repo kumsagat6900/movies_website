@@ -18,11 +18,16 @@
           placeholder="Поиск фильмов..."
           class="search-input"
         />
-        <button class="btn-favorites">⭐ Избранное</button>
+        <ul class="suggestions"></ul>
+        <button class="btn-favorites" onclick="window.location.href='favorites.html'">⭐ Избранное</button>
       </nav>
     </header>
 
     <main>
+      <section class="search-results section">
+        <h2>Результаты поиска</h2>
+        <div class="cards"></div>
+      </section>
       <section id="popular" class="popular section">
         <h2>Популярные фильмы</h2>
         <div class="cards">
@@ -38,14 +43,91 @@
             <img src="images/matrix.jpg" alt="Матрица" class="card-img" />
             <h3>Матрица</h3>
             <p class="card-desc">Год: 1999</p>
+            <button class="btn-add-fav">⭐ В избранное</button>
           </article>
           <article class="card">
-            <img src="images/fightclub.jpg" alt="Бойцовский клуб" class="card-img" />
+            <img
+              src="images/fightclub.jpg"
+              alt="Бойцовский клуб"
+              class="card-img"
+            />
             <h3>Бойцовский клуб</h3>
             <p class="card-desc">Год: 1999</p>
+            <button class="btn-add-fav">⭐ В избранное</button>
           </article>
           <article class="card">
-            <img src="images/godfather.webp" alt="Крёстный отец" class="card-img" />
+            <img
+              src="images/godfather.webp"
+              alt="Крёстный отец"
+              class="card-img"
+            />
+            <h3>Крёстный отец</h3>
+            <p class="card-desc">Год: 1972</p>
+            <button class="btn-add-fav">⭐ В избранное</button>
+          </article>
+          <article class="card">
+            <img src="images/1+1.webp" alt="Фильм 1+1" class="card-img" />
+            <h3>1+1</h3>
+            <p class="card-desc">
+              История дружбы миллионера и его сиделки. Год: 2011
+            </p>
+            <button class="btn-add-fav">⭐ В избранное</button>
+          </article>
+          <article class="card">
+            <img src="images/matrix.jpg" alt="Матрица" class="card-img" />
+            <h3>Матрица</h3>
+            <p class="card-desc">Год: 1999</p>
+            <button class="btn-add-fav">⭐ В избранное</button>
+          </article>
+          <article class="card">
+            <img
+              src="images/fightclub.jpg"
+              alt="Бойцовский клуб"
+              class="card-img"
+            />
+            <h3>Бойцовский клуб</h3>
+            <p class="card-desc">Год: 1999</p>
+            <button class="btn-add-fav">⭐ В избранное</button>
+          </article>
+          <article class="card">
+            <img
+              src="images/godfather.webp"
+              alt="Крёстный отец"
+              class="card-img"
+            />
+            <h3>Крёстный отец</h3>
+            <p class="card-desc">Год: 1972</p>
+            <button class="btn-add-fav">⭐ В избранное</button>
+          </article>
+          <article class="card">
+            <img src="images/1+1.webp" alt="Фильм 1+1" class="card-img" />
+            <h3>1+1</h3>
+            <p class="card-desc">
+              История дружбы миллионера и его сиделки. Год: 2011
+            </p>
+          </article>
+          <article class="card">
+            <img src="images/matrix.jpg" alt="Матрица" class="card-img" />
+            <h3>Матрица</h3>
+            <p class="card-desc">Год: 1999</p>
+            <button class="btn-add-fav">⭐ В избранное</button>
+          </article>
+          <article class="card">
+            <img
+              src="images/fightclub.jpg"
+              alt="Бойцовский клуб"
+              class="card-img"
+            />
+            <h3>Бойцовский клуб</h3>
+            <p class="card-desc">Год: 1999</p>
+            <button class="btn-add-fav">⭐ В избранное</button>
+          </article>
+          <article class="card">
+            <img
+              src="images/godfather.webp"
+              alt="Крёстный отец"
+              class="card-img"
+            />
             <h3>Крёстный отец</h3>
             <p class="card-desc">Год: 1972</p>
           </article>
@@ -74,7 +156,11 @@
             </p>
           </article>
           <article class="card">
-            <img src="images/spiderman.webp" alt="Человек-паук: Нет пути домой" class="card-img" />
+            <img
+              src="images/spiderman.webp"
+              alt="Человек-паук: Нет пути домой"
+              class="card-img"
+            />
             <h3>Человек-паук: Нет пути домой</h3>
             <p class="card-desc">Год: 2021</p>
           </article>
@@ -85,24 +171,81 @@
             <p class="card-desc">Год: 2022</p>
           </article>
           <article class="card">
-            <img src="images/mission8.jpg" alt="Mission: Impossible 8" class="card-img" />
+            <img
+              src="images/mission8.jpg"
+              alt="Mission: Impossible 8"
+              class="card-img"
+            />
             <h3>Mission: Impossible – The Final Reckoning</h3>
             <p class="card-desc">Год: 2025</p>
           </article>
-      
+
           <article class="card">
-            <img src="images/jurassic_rebirth.jpg" alt="Jurassic World: Rebirth" class="card-img" />
+            <img
+              src="images/jurassic_rebirth.jpg"
+              alt="Jurassic World: Rebirth"
+              class="card-img"
+            />
             <h3>Jurassic World: Rebirth</h3>
             <p class="card-desc">Год: 2025</p>
           </article>
-      
+
           <article class="card">
-            <img src="images/superman2025.jpg" alt="Superman" class="card-img" />
+            <img
+              src="images/superman2025.jpg"
+              alt="Superman"
+              class="card-img"
+            />
             <h3>Superman</h3>
             <p class="card-desc">Год: 2025</p>
           </article>
-
-      
+          <article class="card">
+            <img src="images/dune.webp" alt="Дюна" class="card-img" />
+            <h3>Дюна</h3>
+            <p class="card-desc">
+              Эпическая история Атрейдесов на планете Арракис. Год: 2021
+            </p>
+          </article>
+          <article class="card">
+            <img
+              src="images/oppenheimer.jpg"
+              alt="Оппенгеймер"
+              class="card-img"
+            />
+            <h3>Оппенгеймер</h3>
+            <p class="card-desc">
+              Создание атомной бомбы глазами Кристофера Нолана. Год: 2023
+            </p>
+          </article>
+          <article class="card">
+            <img
+              src="images/spiderman.webp"
+              alt="Человек-паук: Нет пути домой"
+              class="card-img"
+            />
+            <h3>Человек-паук: Нет пути домой</h3>
+            <p class="card-desc">Год: 2021</p>
+          </article>
+          <article class="card">
+            <img
+              src="images/oppenheimer.jpg"
+              alt="Оппенгеймер"
+              class="card-img"
+            />
+            <h3>Оппенгеймер</h3>
+            <p class="card-desc">
+              Создание атомной бомбы глазами Кристофера Нолана. Год: 2023
+            </p>
+          </article>
+          <article class="card">
+            <img
+              src="images/spiderman.webp"
+              alt="Человек-паук: Нет пути домой"
+              class="card-img"
+            />
+            <h3>Человек-паук: Нет пути домой</h3>
+            <p class="card-desc">Год: 2021</p>
+          </article>
         </div>
       </section>
 
@@ -129,7 +272,26 @@
             <h3>Джокер</h3>
             <p class="card-desc">Драма, криминал, психология. Год: 2019</p>
           </article>
-
+          <article class="card">
+            <img src="images/inception.jpg" alt="Начало" class="card-img" />
+            <h3>Начало</h3>
+            <p class="card-desc">Фантастика, триллер, драма. Год: 2010</p>
+          </article>
+          <article class="card">
+            <img src="images/joker.jpeg" alt="Джокер" class="card-img" />
+            <h3>Джокер</h3>
+            <p class="card-desc">Драма, криминал, психология. Год: 2019</p>
+          </article>
+          <article class="card">
+            <img src="images/inception.jpg" alt="Начало" class="card-img" />
+            <h3>Начало</h3>
+            <p class="card-desc">Фантастика, триллер, драма. Год: 2010</p>
+          </article>
+          <article class="card">
+            <img src="images/joker.jpeg" alt="Джокер" class="card-img" />
+            <h3>Джокер</h3>
+            <p class="card-desc">Драма, криминал, психология. Год: 2019</p>
+          </article>
         </div>
       </section>
     </main>
